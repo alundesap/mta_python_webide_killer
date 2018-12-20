@@ -1,0 +1,33 @@
+ID: mta_python_webide_killer
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: app
+   type: html5
+   path: app
+
+ 
+
+
+ - name: node
+   type: nodejs
+   path: srv/node
+   provides:
+    - name: node_api
+      properties:
+         url: ${default-url}
+
+
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_db
+
+
+resources:
+ - name: hdi_db
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>mta_python_webide_killer</name>
+	<comment>Multi-Target Application with a Python module that will not work when imported into WebIDE.</comment>
+        <projects>
+        </projects>
+        <buildSpec>
+                <buildCommand>
+                        <name>org.python.pydev.PyDevBuilder</name>
+                        <arguments>
+                        </arguments>
+                </buildCommand>
+        </buildSpec>
+        <natures>
+                <nature>org.python.pydev.pythonNature</nature>
+        </natures>
+</projectDescription>
