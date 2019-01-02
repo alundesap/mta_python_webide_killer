@@ -7,6 +7,7 @@ modules:
    type: html5
    path: app
    requires:
+# If this section is uncommented, the app module will not run due to missing reference.
 ### Python Requires Block Begin vvv
 #    - name: python_api
 #      group: destinations

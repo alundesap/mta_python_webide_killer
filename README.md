@@ -28,5 +28,17 @@ When attempting a top-level project build (MTAR build) the following occurs when
 11:38:14 AM (Builder) Build of /mta_python_webide_killer failed.
 ```
 
+Within the MTA.YAML file python module properties don't work.
+```
+# If this section is uncommented, the app module will not run due to missing reference.
+### Python Requires Block Begin vvv
+#    - name: python_api
+#      group: destinations
+#      properties:
+#        name: python_be
+#        url: ~{url}
+#        forwardAuthToken: true
+### Python Requires Block End ^^^
+```
 
 
