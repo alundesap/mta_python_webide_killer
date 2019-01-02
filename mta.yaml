@@ -8,12 +8,12 @@ modules:
    path: app
    requires:
 ### Python Requires Block Begin vvv
-    - name: python_api
-      group: destinations
-      properties:
-        name: python_be
-        url: ~{url}
-        forwardAuthToken: true
+#    - name: python_api
+#      group: destinations
+#      properties:
+#        name: python_be
+#        url: ~{url}
+#        forwardAuthToken: true
 ### Python Requires Block End ^^^
     - name: node_api
       group: destinations
