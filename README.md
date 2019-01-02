@@ -20,3 +20,13 @@ xs start webide-killer.python
 
 git pull ; xs push webide-killer.python -k 1024M -m 256M -n python -p srv/python
 ```
+
+When attempting a top-level project build (MTAR build) the following occurs when the python module definition is uncommented.
+```
+11:38:08 AM (Builder) Build of "/mta_python_webide_killer" started.
+11:38:14 AM (DIBuild) [INFO] Target platform is XSA[INFO] Reading mta.yaml[INFO] Processing mta.yaml[INFO] Processing module app[INFO] Processing module python[INFO] Processing module node[ERROR] Module python does not exist in the folder srv/python.
+11:38:14 AM (Builder) Build of /mta_python_webide_killer failed.
+```
+
+
+
