@@ -6,9 +6,31 @@ modules:
  - name: app
    type: html5
    path: app
+   requires:
+### Python Requires Block Begin vvv
+    - name: python_api
+      group: destinations
+      properties:
+        name: python_be
+        url: ~{url}
+        forwardAuthToken: true
+### Python Requires Block End ^^^
+    - name: node_api
+      group: destinations
+      properties:
+        name: node_be
+        url: ~{url}
+        forwardAuthToken: true
 
- 
-
+### Python Module Block Begin vvv
+ - name: python
+   type: python
+   path: srv/python
+   provides:
+    - name: python_api
+      properties:
+         url: ${default-url}
+### Python Module Block End ^^^
 
  - name: node
    type: nodejs
@@ -17,17 +39,3 @@ modules:
     - name: node_api
       properties:
          url: ${default-url}
-
-
- - name: db
-   type: hdb
-   path: db
-   requires:
-    - name: hdi_db
-
-
-resources:
- - name: hdi_db
-   properties:
-      hdi-container-name: ${service-name}
-   type: com.sap.xs.hdi-container
